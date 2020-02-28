@@ -1,0 +1,47 @@
+.micropost__overview__name{
+  margin-bottom: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  word-wrap: break-word;
+  font-family: MS Sans Serif;
+}
+
+.card__item {
+    display: inline-block;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px #eae6dc;
+}
+.card__item__info {
+    padding: 12px;
+}
+
+.card__item__info__name {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 40px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card__item__img {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+}
+
+.card__item__info__station {
+    margin-bottom: 4px;
+    color: #5f6367;
+    font-size: 14px;
+}
+
+.card-body{
+    padding:10px;
+}

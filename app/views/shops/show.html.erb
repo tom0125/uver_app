@@ -1,0 +1,164 @@
+<body>
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+      <!-- Post Content Column -->
+      <div class="col-lg-12">
+        <!-- Title -->
+        <div class="micropost__overview__name">
+          <center><%=@shop.name%></center>
+        </div>
+        <hr>
+        <!-- Date/Time -->
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="google-map">
+              <%= content_tag(:iframe, 'map', src:'https://www.google.com/maps/embed/v1/place?key=AIzaSyC5ru0zLBWsd6JxonPfd37qwbDfTbJmbtM&q=' + @shop.name, 
+        width: '800px', height: "600px", frameborder: 0) %>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card my-4">
+              <h5 class="card-header">ランキング</h5>
+              <div class="card-body">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <th><span class="info">ピック頻度総合</span></th>
+                      <td>
+                        <%=@shop.created_at.strftime("%Y-%m-%d %H:%M")%>
+                      </td>
+                      <tr>
+                        <th><span class="info">ピック頻度(朝)</span></th>
+                        <td>１位</td>
+                      </tr>
+                      <tr>
+                        <th><span class="info">ピック頻度(昼)</span></th>
+                        <td>１位</td>
+                      </tr>
+                      <tr>
+                        <th><span class="info">ピック頻度(夜)</span></th>
+                        <td>１位</td>
+                      </tr>
+                      <tr>
+                        <th><span class="info">注文頻度</span></th>
+                        <td>１位</td>
+                      </tr>
+                      <tr>
+                        <th><span class="info">店員の対応</span></th>
+                        <td>１位</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <!-- Post Content -->
+        <h3 id="detailInfo">店舗詳細情報</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th><span class="info">投稿日</span></th>
+              <td>
+                <%=@shop.created_at.strftime("%Y-%m-%d %H:%M")%>
+              </td>
+              <tr>
+                <th><span class="info">ピック時の<br>注意点</span></th>
+                <td>特になし</td>
+              </tr>
+              <tr>
+                <th><span class="info">駐輪場所</span></th>
+                <td>近くの駐輪場利用</td>
+              </tr>
+              <tr>
+                <th><span class="info">待ち時間</span></th>
+                <td>長い(5-10)</td>
+              </tr>
+              <tr>
+                <th><span class="info">注文頻度</span></th>
+                <td>多い</td>
+              </tr>
+              <tr>
+                <th><span class="info">店員の対応</span></th>
+                <td>とても良い</td>
+              </tr>
+          </tbody>
+        </table>
+        <hr>
+        <h3 id="detailInfo">ピック時の注意点</h3>
+        <table class="table">
+          <tbody>
+            <tr>
+              <th><span class="info">大きいサイズの商品</span></th>
+              <td>あり</td>
+            </tr>
+            <tr>
+              <th><span class="info">バッグ持ち込み</span></th>
+              <td>必須①　不可④</td>
+            </tr>
+            <tr>
+              <th><span class="info">独自ルール<br>(二重ピック禁止等)</span></th>
+              <td>二重ピック禁止、店内待機NG</td>
+            </tr>
+            <tr>
+              <th><span class="info">独自ルール<br>(二重ピック禁止等)</span></th>
+              <td>二重ピック禁止、店内待機NG</td>
+            </tr>
+            <tr>
+              <th><span class="info">独自ルール<br>(二重ピック禁止等)</span></th>
+              <td>二重ピック禁止、店内待機NG</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <!-- Comments Form -->
+        <%#=form_tag("/shop/#{@shop.id}/comment") do %>
+          <div class="card my-4">
+            <h5 class="card-header">クチコミを投稿</h5>
+            <div class="card-body">
+              <form>
+                <div class="form-group"> <textarea class="form-control" rows="3" name="comment"></textarea> </div> <button type="submit" class="btn btn-primary">投稿</button> </form>
+            </div>
+          </div>
+          <%#end%>
+            <!-- Single Comment -->
+            <!--reverse_eachで投稿を反転-->
+            <#% @shop.reviews.reverse_each do |com|%>
+              <div class="media mb-4"> <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                <div class="media-body">
+                  <h5 class="mt-0">駐禁取締注意</h5>
+                  <%#=com.comment%> <br>
+                    <p class="reviews_shop_date">
+                      <%#=com.created_at.strftime("%Y-%m-%d %H:%M")%>
+                        <!--strftime("%Y-%m-%d %H:%M")% 日本時間で表示--><i class="fa fa-star"></i> </p>
+                </div>
+              </div>
+              <%#end%>
+                <!-- <div class="col-lg-8"> --></div>
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+        <!-- Search Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">店舗検索</h5>
+          <div class="card-body">
+            <div class="input-group"> <input type="text" class="form-control" placeholder="店舗名を入力してください"> <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button">Go!</button>
+              </span> </div>
+          </div>
+        </div>
+        <!-- Categories Widget -->
+        <!-- Side Widget -->
+        <div class="card my-４">
+          <h5 class="card-header">Side Widget</h5>
+          <div class="card-body">
+            <%= button_to "削除",shop_path(@shop.id),method: :delete,class: 'btn btn-info  btn-lg'%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</body>

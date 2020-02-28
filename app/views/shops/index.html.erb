@@ -1,0 +1,51 @@
+<body>
+  <!-- Navigation -->
+  <!-- Page Content -->
+  <div class="container">
+  
+    <div class="card-body">
+      <div class="input-group"> <input type="text" class="form-control" placeholder="店舗名を入力してください"> 
+        <span class="input-group-btn">
+          <button class="btn btn-secondary" type="button">Go!</button>
+        </span> 
+      </div>
+    </div>
+    <!--row start-->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="list-group"> 
+          <a href="#" class="list-group-item">中央区</a> 
+          <a href="#" class="list-group-item">博多区</a> 
+          <a href="#" class="list-group-item">西区</a> 
+          <a href="#" class="list-group-item">南区</a>
+        </div>
+      </div>
+    </div>
+    <!--row end-->
+     
+        <div class="row">
+          <!--shop-->
+          <% @shop.each do |shop|%>
+            <div class="col-md-3 mt-5">
+              <div class="card__item "> <a href="#">
+                <img class="card__item__img" src="https://nomalog2.s3.amazonaws.com/uploads/micropost/picture/17/S__15818754.jpg" alt="">
+                </a>
+                <div class="card__item__info">
+                  <div class="card__item__info__name">
+                    <%=link_to(shop.name,"/shops/#{shop.id}")%>
+                  </div>
+                  </a>
+                  <div class="card__item__info__station"> 博多区 </div>
+                  <p class="card-text"></p>
+                </div>
+              </div>
+            </div>
+            <%end%>
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.col-lg-9 -->
+    </div>
+    <!-- /.row -->
+  </div>
+</body>
