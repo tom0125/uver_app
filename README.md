@@ -1,24 +1,21 @@
-# README
+この度、3月末日を持ちましてチームを離れる運びとなりました。
+本来であれば直接ご挨拶を申し上げるべきところですが、メールでのご挨拶にて失礼いたします。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+この2年間、業務を通して多くの方々と関わり、さまざまなことを学ばせていただきました。
+至らぬ点もあったかと思いますが、皆様からの温かいサポートには深く感謝しております。
 
-Things you may want to cover:
+今後は、これまでの経験や学びを活かして、より一層精進してまいります。
 
-* Ruby version
+末筆ながら、皆様のご健康と今後のご多幸を心よりお祈り申し上げます。
 
-* System dependencies
 
-* Configuration
+---
 
-* Database creation
+みなさん、お疲れさまです。
+この度本日をもってチームから離れることになりましたが、
+この2年間チームの皆さんからたくさんのことを学ばせてもらって感謝しています。
+振り返ってみればあっというまでしたけど、本当に良い経験を積ませて頂きました。
+これからは、新しい環境で頑張るつもりです。皆さん、今までありがとうございました。
 
-* Database initialization
+---
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
